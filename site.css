@@ -1,0 +1,125 @@
+/* Jade Gourd's Mountains look: warm paper, ink, jade and a cinnabar seal, light and dark. */
+:root {
+  color-scheme: light dark;
+  --paper: #F4EEE2;
+  --card: #FBF8F1;
+  --separator: #E6DCCA;
+  --quiet: #ECE3D2;
+  --ink: #1F1C19;
+  --ink-soft: #6B645B;
+  --jade: #1E6B58;
+  --jade-mist: #DCEBE3;
+  --cinnabar: #B23A2B;
+  --serif: "New York", ui-serif, "Iowan Old Style", Georgia, "Times New Roman", serif;
+  --sans: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --paper: #121619;
+    --card: #1C2125;
+    --separator: #2C3237;
+    --quiet: #2A3035;
+    --ink: #EDE6D8;
+    --ink-soft: #A89F92;
+    --jade: #6CC2A3;
+    --jade-mist: #1F3A31;
+    --cinnabar: #E0614E;
+  }
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font: 17px/1.6 var(--sans);
+}
+
+main {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+a { color: var(--jade); text-underline-offset: 0.15em; }
+a:hover { text-decoration-thickness: 2px; }
+
+h1, h2, h3 { font-family: var(--serif); font-weight: 700; line-height: 1.2; color: var(--ink); }
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 28px 0 0;
+  font-family: var(--serif);
+  font-size: 22px;
+  font-weight: 700;
+}
+.brand a { color: inherit; text-decoration: none; }
+.brand img { border-radius: 22%; }
+
+/* Home */
+
+.hero { padding: 24px 0 8px; text-align: center; }
+.hero .brand { justify-content: center; }
+.hero h1 { font-size: clamp(36px, 6vw, 60px); margin: 36px auto 16px; max-width: 14em; }
+.lead { font-size: clamp(18px, 2.2vw, 21px); color: var(--ink-soft); max-width: 36em; margin: 0 auto 28px; }
+.store-note { font-size: 15px; color: var(--ink-soft); margin: 0 0 40px; }
+.hero-img { width: 100%; height: auto; display: block; border-radius: 20px; }
+
+.features { display: grid; gap: 64px; padding: 72px 0 24px; }
+.feature { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: center; }
+.feature.reverse .shot { order: -1; }
+.feature h2 { font-size: clamp(28px, 3.4vw, 38px); margin: 0 0 14px; }
+.feature p { margin: 0 0 12px; color: var(--ink-soft); }
+.feature ul { margin: 0; padding-left: 1.2em; color: var(--ink-soft); }
+.feature li { margin: 4px 0; }
+.shot { text-align: center; }
+.shot img { width: min(100%, 360px); height: auto; border-radius: 28px; box-shadow: 0 18px 40px rgba(31, 28, 25, 0.16); }
+
+.facts { margin: 56px 0 0; padding: 28px; background: var(--card); border: 1px solid var(--separator); border-radius: 24px; }
+.facts ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; justify-content: center; gap: 12px 32px; }
+.facts strong { color: var(--jade); }
+
+.disclaimer { max-width: 40em; margin: 40px auto 0; text-align: center; color: var(--ink-soft); font-size: 15px; }
+
+@media (max-width: 720px) {
+  .feature { grid-template-columns: 1fr; gap: 24px; }
+  .feature.reverse .shot { order: 0; }
+  .features { gap: 56px; padding-top: 48px; }
+}
+
+/* Support and the privacy policy */
+
+.page { max-width: 720px; }
+.page h1 { font-size: clamp(32px, 5vw, 44px); margin: 40px 0 8px; }
+.page h2 { font-size: 26px; margin: 40px 0 12px; }
+.page h3 { font-size: 19px; margin: 28px 0 6px; }
+.page p, .page li { color: var(--ink); }
+.page .meta { color: var(--ink-soft); margin: 0 0 24px; }
+.page ul { padding-left: 1.3em; }
+.page li { margin: 6px 0; }
+
+.contact {
+  margin: 24px 0;
+  padding: 20px 24px;
+  background: var(--card);
+  border: 1px solid var(--separator);
+  border-radius: 18px;
+}
+.contact p { margin: 4px 0; }
+
+/* Footer */
+
+footer {
+  margin: 72px 0 0;
+  padding: 28px 0 40px;
+  border-top: 1px solid var(--separator);
+  text-align: center;
+}
+footer p { margin: 6px 0; }
+footer .small { font-size: 14px; color: var(--ink-soft); }
