@@ -33,8 +33,8 @@ inside the medicine-tracker workspace; the workspace's `AGENTS.md` covers work t
 ## Content rules
 
 - What the site says about the app (price, availability, features) must match the Release build and its App Store
-  listing. Jade Gourd Plus comes with 1.1: until 1.1 is released, only the privacy policy mentions it (buying it, from
-  version 1.1). The home page and Support add Plus at release.
+  listing. Jade Gourd Plus is in 1.1 and later: the home page and Support say what's free, what Plus adds, and how
+  restoring and refunds work, with no price (it differs by country), and the privacy policy covers buying it.
 - No medical claims: the app records what people enter and never suggests, calculates or checks doses.
 - The privacy policy describes what the app actually does with data. Change it only with the app, and give it a
   new effective date.
