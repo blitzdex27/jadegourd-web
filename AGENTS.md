@@ -9,7 +9,8 @@ inside the medicine-tracker workspace; the workspace's `AGENTS.md` covers work t
   - `index.html`: the home page.
   - `support/` and `privacy/`: an `index.html` each.
   - `site.css`: every page's style, in the app's Mountains colours, light and dark.
-  - `images/`: the icon and the home page's pictures, made from the app's App Store screenshots.
+  - `images/`: the icon and the home page's pictures, made from the app's App Store screenshots, and Apple's black
+    "Download on the App Store" badge (`download-on-the-app-store.svg`), exactly as Apple's Download Artwork gives it.
 - Store screenshots and their sources live in the workspace (`docs/release/screenshots/`). This repo keeps only the
   files the pages serve.
 
@@ -39,3 +40,8 @@ inside the medicine-tracker workspace; the workspace's `AGENTS.md` covers work t
 - The privacy policy describes what the app actually does with data. Change it only with the app, and give it a
   new effective date.
 - Every page's footer keeps the developer line, links to the other pages, and the copyright and Apple trademark line.
+- The App Store badge follows Apple's marketing guidelines: never recoloured, cropped, animated or given effects; at
+  least 40 px tall; a quarter of its height clear all round; one per page; never the page's main picture. Only the
+  home page shows it, and a page that shows it carries Apple's credit lines in its footer.
+- The home page and Support have a Smart App Banner (`<meta name="apple-itunes-app">`), with the app's Apple ID,
+  6835069868. The privacy policy has none.
